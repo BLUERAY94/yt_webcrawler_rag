@@ -29,11 +29,12 @@ A Python-based tool to scrape website content into **Markdown**, clean and chunk
 ---
 
 ## File Structure
+```
 ├── scraper.py               # Main Python script
 ├── scraped_data.txt         # Cleaned Markdown output
 ├── requirements.txt         # packages to be installed
 ├── README.md
-
+```
 ## 📦 Installation
 Make sure you have **Python 3.9+** installed. Install dependencies:
 
