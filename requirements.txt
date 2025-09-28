@@ -1,0 +1,16 @@
+langchain-groq
+python-dotenv==1.0.1
+langchain-core
+langchain-community
+ipykernel==6.29.3
+jupyter==1.0.0
+langchain_text_splitters
+sentence-transformers
+langchain-huggingface
+faiss-cpu
+transformers
+langchain
+tldextract
+bs4 
+html2text
+
