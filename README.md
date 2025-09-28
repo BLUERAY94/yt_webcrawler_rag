@@ -26,19 +26,17 @@ A Python-based tool to scrape website content into **Markdown**, clean and chunk
 
 ---
 
-## Installation File Structure
-
+## 📦 Installation
 Make sure you have **Python 3.9+** installed. Install dependencies:
 
 ```bash
-pip install requests beautifulsoup4 html2text tldextract langchain faiss-cpu sentence-transformers
-
+pip install -r requirements.txt
 
 ## File Structure
 ├── scraper.py               # Main Python script
 ├── scraped_data.txt         # Cleaned Markdown output
+├── requirements.txt         # packages to be installed
 ├── README.md
 
 
-<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/181de677-005b-43bc-bebc-a224400e0d9c" />
 
