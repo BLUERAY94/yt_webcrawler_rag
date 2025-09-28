@@ -28,6 +28,50 @@ A Python-based tool to scrape website content into **Markdown**, clean and chunk
 
 ---
 
+# 🔹 `chain_type` in RetrievalQA
+
+RetrievalQA in LangChain supports different **chain types** for how retrieved documents are processed with the LLM.  
+
+---
+
+## 📌 1. `stuff`
+- **Simplest method**  
+- All retrieved documents are **stuffed (concatenated)** into the prompt along with your query.  
+- Works well if:
+  - Documents are short  
+  - Number of tokens is small  
+
+---
+
+## 📌 2. `map_reduce`
+- **Two-step process**:
+  1. **Map step** → Each retrieved document is processed individually with the LLM.  
+  2. **Reduce step** → Outputs are combined/summarized.  
+- Better for handling:
+  - Many documents  
+  - Long documents  
+- Helps avoid hitting token limits.  
+
+---
+
+## 📌 3. `refine`
+- **Sequential refinement process**:  
+  - Starts with the first document → generates an initial answer.  
+  - Each subsequent document is used to **refine** the answer further.  
+- Useful when you want the model to **incrementally improve** its response.  
+
+---
+
+## 📌 4. `map_rerank`
+- Each document is:
+  - Scored by the LLM for **relevance**  
+  - An answer is produced per document  
+- The **best-scored answer** is returned.  
+- Useful when not all documents are relevant.  
+
+---
+
+
 ## File Structure
 ```
 ├── scraper.py               # Main Python script
